@@ -1,2 +1,3 @@
-# Applied number theory. The topics at hand will be:
+# Applied number theory.
+The topics at hand will be:
 ...
