@@ -6,3 +6,4 @@ The topics at hand will be:
 - Miller-Rabin
 - Square-and-multiply
 - Double-and-add
+- Elliptic curve
