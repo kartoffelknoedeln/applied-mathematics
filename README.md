@@ -4,6 +4,6 @@ The topics at hand will be:
 - Euler-phi function
 - Baby-step, giant-step
 - Miller-Rabin
-- Square-and-multiply
-- Double-and-add
-- Elliptic curve
+- Square and multiply
+- Elliptic curve discrete log
+- Elliptic curve double and add
