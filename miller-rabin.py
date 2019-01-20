@@ -6,24 +6,17 @@ def checkingByTwo(num):
     compositepart = int(num/(2**power))
     return compositepart, power
 
-def rabinMillerTest(num, compositepart, power):
-    counter = 0
+def rabinMillerTest(num, compositepart, power, witness):
     for i in range(power):
-        if (2**((2**i)*compositepart)%num) != 1 and (2**((2**i)*compositepart)%num) != num - 1 and (3**((2**i)*compositepart)%num) != 1 and (3**((2**i)*compositepart)%num) != num - 1 and (5**((2**i)*compositepart)%num) != 1 and (5**((2**i)*compositepart)%num) != num - 1:
-            counter += 1
-    return counter
-
-def compositeOrNot(num, counter, power):
-    if counter >= 0.6*power:
-        print(num, 'is probably a composite.')
-    else:
-        print(num, 'is probably a prime.')
+        if (witness**((2**i)*compositepart)%num) != 1 and (witness**((2**i)*compositepart)%num) != num - 1 and (3**((2**i)*compositepart)%num) != 1 and (3**((2**i)*compositepart)%num) != num - 1 and (5**((2**i)*compositepart)%num) != 1 and (5**((2**i)*compositepart)%num) != num - 1:
+            print('Witness', witness, 'with power', i, 'does not generate a number that is 1 or -1.')
+        else:
+            print('Witness', witness, 'with power', i, 'does generate a number that is 1 or -1.')
 
 def main():
-    print('We will be using 2, 3, and 5 as witnesses.')
     num = int(input('Please enter a number to check if it is composite: '))
+    witness = int(input('Please enter a number that is the witness: '))
     compositepart, power = checkingByTwo(num)
-    counter = rabinMillerTest(num, compositepart, power)
-    compositeOrNot(num, counter, power)
+    rabinMillerTest(num, compositepart, power, witness)
 
 main()
