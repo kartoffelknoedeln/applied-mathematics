@@ -1,44 +1,36 @@
-def diff_inverse_modulo(point1, point2, modulo):
-    EC_lambda = 0
-    
-    for i in range(modulo):
-        if ((point2[0] - point1[0]) * i) % modulo == (point2[1] - point1[1]) % modulo:
-            return i
-
-def same_inverse_modulo(point1, point2, modulo, A):
-    EC_lambda = 0
-    
-    for i in range(modulo):
-        if ((2 * point1[1]) * i) % modulo == ((3 * (point1[0])**2) + A) % modulo:
-            return i
-
-def EC_addition(point1, point2, modulo, A, diff_lambda, same_lambda):
-    point3 = [0, 0]
-    
+def lambdaFunctions(point1, point2, a, modulo):
     if point1 != point2:
-        point3[0] += (diff_lambda**2 - point1[0] - point2[0]) % modulo
-        point3[1] += (diff_lambda * (point1[0] - point3[0]) - point1[1]) % modulo
-        print point3
+        for i in range(modulo):
+            if ((int(point2[1]) - int(point1[1])) % modulo) == ((int(point2[0]) - int(point1[0])) * i % modulo):
+                return i
     else:
-        point3[0] += (same_lambda**2 - point1[0] - point2[0]) % modulo
-        point3[1] += (same_lambda * (point1[0] - point3[0]) - point1[1]) % modulo
-        print point3
+        for i in range(modulo):
+            if (2 * int(point1[1]) * i) % modulo == (3 * int(point1[0])**2 + a) % modulo:
+                return i
+
+def pointsUpdate(point1, point2, i, modulo):
+    x = (i**2 - int(point1[0]) - int(point2[0])) % modulo
+    y = (i*(int(point1[0]) - x) - int(point1[1])) % modulo
+    point1 = x, y
+    return point1
 
 def main():
     point1 = []
     point2 = []
-    point1 += input('What is the coordinate of P? ')
-    point2 += input('What is the coordinate of Q? ')
-    A = input('What is the value of A? ')
-    modulo = input('What is the modulo value? ')
-    multiply = input('How many times do you want to iterate? ')
+    print('Let the elliptic curve equation be E:Y**2 = X**3 + AX + B.')
+    print()
+    print('Please type in the point as just numbers:')
+    print('i.e. (4, 2) as 42')
+    print()
+    point1 = input('What is the coordinate of P? ')
+    point2 = input('What is the coordinate of Q? ')
+    a = int(input('What is the value of A? '))
+    modulo = int(input('What is the modulo value? '))
+    add = int(input('How many times do you want to iterate adding? '))
 
-    for i in range(multiply - 1):
-        diff_lambda = diff_inverse_modulo(point1, point2, modulo)
-        same_lambda = same_inverse_modulo(point1, point2, modulo, A)
-        point_update = EC_addition(point1, point2, modulo, A, diff_lambda, same_lambda)
-        point1 = point_update
-
-        print point1
+    for i in range(add):
+        i = lambdaFunctions(point1, point2, a, modulo)
+        point1 = pointsUpdate(point1, point2, i, modulo)
+        print(point1)
 
 main()
