@@ -7,7 +7,7 @@ def findingGamma(modulo):
 def reversingPowers(base, gamma, modulo, answer):
     numlist = []
     for i in range(gamma-1):
-        numlist += (answer*(base**(modulo-1-(i*gamma))))%37,
+        numlist += (answer*(base**(modulo-1-(i*gamma)))) % modulo,
     return numlist
 
 def listNumCheck(numlist, gamma):
