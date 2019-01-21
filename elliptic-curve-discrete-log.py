@@ -19,16 +19,17 @@ def main():
     point2 = []
     print('Let the elliptic curve equation be E:Y**2 = X**3 + AX + B.')
     print()
-    print('Please type in the point as just numbers:')
-    print('i.e. (4, 2) as 42')
-    print()
-    point1 = input('What is the coordinate of P? ')
-    point2 = input('What is the coordinate of Q? ')
+    x1 = int(input('What is the coordinate of x for point 1? '))
+    y1 = int(input('What is the coordinate of y for point 1? '))
+    point1 = x1, y1
+    x2 = int(input('What is the coordinate of x for point 2? '))
+    y2 = int(input('What is the coordinate of y for point 2? '))
+    point2 = x2, y2
     a = int(input('What is the value of A? '))
     modulo = int(input('What is the modulo value? '))
     add = int(input('How many times do you want to iterate adding? '))
 
-    for i in range(add):
+    for i in range(add-1):
         i = lambdaFunctions(point1, point2, a, modulo)
         point1 = pointsUpdate(point1, point2, i, modulo)
         print(point1)
