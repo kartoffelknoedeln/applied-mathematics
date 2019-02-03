@@ -1,14 +1,14 @@
 def isNumPrime(modulo):
-    for i in range(round(modulo/2), 1, -1):
-        if modulo%i == 0:
+    for i in range(modulo // 2, 1, -1):
+        if modulo % i == 0:
             return False
     return True
     
 def factors(modulo):
     i = modulo
     factorList = []
-    for i in range(round(modulo/2), 1, -1):
-        if modulo%i == 0:
+    for i in range(modulo // 2, 1, -1):
+        if modulo % i == 0:
             factorList += i,
     return factorList
 
@@ -21,7 +21,7 @@ def isFactorPrime(factorList):
 
 def eulerphiFunction(modulo, sortedList, checkcheck):
     if checkcheck == True:
-        eulerphianswer = modulo-1
+        eulerphianswer = modulo - 1
         return eulerphianswer
     else:
         eulerphianswer = modulo
@@ -43,8 +43,8 @@ def powersBreakdown(power, eulerphianswer):
 def powersMultiply(powers, base, modulo):
     x = 1
     for i in range(len(powers)):
-        x = x*(base**powers[i])
-    print('The answer is', x%modulo)
+        x = x * (base**powers[i])
+    print('The answer is', x % modulo)
 
 def main():
     print('Welcome to the square and multiple algorithm.')
