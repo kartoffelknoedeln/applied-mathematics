@@ -8,7 +8,7 @@ def checkingByTwo(num):
 
 def rabinMillerTest(num, compositepart, power, witness):
     for i in range(power):
-        if (witness**((2**i)*compositepart)%num) != 1 and (witness**((2**i)*compositepart)%num) != num - 1 and (3**((2**i)*compositepart)%num) != 1 and (3**((2**i)*compositepart)%num) != num - 1 and (5**((2**i)*compositepart)%num) != 1 and (5**((2**i)*compositepart)%num) != num - 1:
+        if (witness**((2**i)*compositepart)%num) != 1 and (witness**((2**i)*compositepart)%num) != num - 1:
             print('Witness', witness, 'with power', i, 'does not generate a number that is 1 or -1.')
         else:
             print('Witness', witness, 'with power', i, 'does generate a number that is 1 or -1.')
