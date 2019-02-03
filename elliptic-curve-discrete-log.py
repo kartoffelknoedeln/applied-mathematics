@@ -10,7 +10,7 @@ def lambdaFunctions(point1, point2, a, modulo):
 
 def pointsUpdate(point1, point2, i, modulo):
     x = (i**2 - int(point1[0]) - int(point2[0])) % modulo
-    y = (i*(int(point1[0]) - x) - int(point1[1])) % modulo
+    y = (i * (int(point1[0]) - x) - int(point1[1])) % modulo
     point1 = x, y
     return point1
 
@@ -29,7 +29,7 @@ def main():
     modulo = int(input('What is the modulo value? '))
     add = int(input('How many times do you want to iterate adding? '))
 
-    for i in range(add-1):
+    for i in range(add - 1):
         i = lambdaFunctions(point1, point2, a, modulo)
         point1 = pointsUpdate(point1, point2, i, modulo)
         print(point1)
