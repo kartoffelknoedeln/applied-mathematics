@@ -6,3 +6,4 @@ The topics at hand will be:
 - Miller-Rabin
 - Square and multiply
 - Elliptic curve discrete log
+- Sieve of Eratosthenes
