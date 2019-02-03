@@ -1,14 +1,14 @@
 def moduloFunction(primroot, modulo):
     remainderList = []
-    for i in range(modulo-1):
-        remainderList += ((primroot**i)%modulo),
+    for i in range(modulo - 1):
+        remainderList += ((primroot**i) % modulo),
     remainderList.sort()
     return remainderList
 
 def listChecker(sortedlist, modulo):
     counter = 1
-    for i in range(modulo-1):
-        if sortedlist[i] == i+1:
+    for i in range(modulo - 1):
+        if sortedlist[i] == i + 1:
             counter += 1
     return counter
 
