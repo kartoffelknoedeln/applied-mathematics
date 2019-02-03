@@ -1,5 +1,5 @@
 def isNumPrime(num):
-    for i in range(round(num/2), 1, -1):
+    for i in range(num // 2, 1, -1):
         if num%i == 0:
             return False
     return True
