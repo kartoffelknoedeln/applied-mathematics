@@ -6,7 +6,7 @@ def primes(limit):
     sieve[0] = False ## 1 is not a prime number
     sievelimit = round(math.sqrt(limit))
     
-    for i in range(4, limit+1):
+    for i in range(2, limit+1):
         for j in range(2, sievelimit+1):
             if i%j == 0 and i != j:
                 sieve[i-1] = False
