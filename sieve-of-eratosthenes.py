@@ -1,18 +1,16 @@
-import math
-
 def primes(limit):
     sieve = [True] * limit
-    primelist = []
-    sieve[0] = False ## 1 is not a prime number
-    sievelimit = round(math.sqrt(limit))
-    
-    for i in range(2, limit+1):
-        for j in range(2, sievelimit+1):
-            if i%j == 0 and i != j:
-                sieve[i-1] = False
+    sieve[0], sieve[1] = False, False
+
+    num = 2
+    while num < limit:
+        while num < limit and not sieve[num]:
+            num += 1
+        for index in range(2*num, limit, num):
+            sieve[index] = False
+        num += 1
                 
-    ## set to index+1 because index starts at 0
-    return [index+1 for index in range(len(sieve)) if sieve[index] == True]
+    return [index for index in range(len(sieve)) if sieve[index] == True]
 
 def main():
     print(primes(100))
