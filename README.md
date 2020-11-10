@@ -7,4 +7,3 @@ The topics at hand will be:
 - Square and multiply
 - Elliptic curve discrete log
 - Sieve of Eratosthenes
-- Markov chain number generator
