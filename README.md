@@ -8,7 +8,7 @@ The topics at hand will be:
   - Miller-Rabin primality test
   - Square and multiply
   - Elliptic curve discrete logarithm
-- Applied linear algebra
+- Numerical linear algebra
   - Jacobi
   - Gauss-Seidel
   - Successive over-relaxation
