@@ -17,8 +17,8 @@ The topics at hand will be:
   - Least Square
     - Linear
     - Nonlinear
-    - Polynomial
-    - Euler
+      - Polynomial
+      - Euler
   - Trigonometric
   - Fast Fourier Transform
   - Power Method
