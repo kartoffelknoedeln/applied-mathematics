@@ -13,4 +13,20 @@ The topics at hand will be:
   - Gauss-Seidel
   - Successive over-relaxation
   - Conjugate gradient
-- ...
+- Numerical approximation
+  - Least Square
+    - Linear
+    - Nonlinear
+    - Polynomial
+    - Euler
+  - Trigonometric
+  - Fast Fourier Transform
+  - Power Method
+  - Wielandt Deflation
+  - Householder
+  - QR
+- Numerical optimisation
+  - Fixed Point
+  - Newton
+  - Broyden
+  - Steepest Descent
