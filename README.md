@@ -1,5 +1,5 @@
 # Applied mathematics.
-The topics at hand will be:
+The topics covered will be:
 - Number theory
   - Sieve of Eratosthenes
   - Primitive roots checker
@@ -20,13 +20,13 @@ The topics at hand will be:
       - Polynomial
       - Euler
   - Trigonometric
-  - Fast Fourier Transform
-  - Power Method
-  - Wielandt Deflation
-  - Householder
-  - QR
+  - Fast Fourier transform
+  - Power iteration
+  - Wielandt deflation
+  - QR decomposition
+  - Householder transformation
 - Numerical optimisation
-  - Fixed Point
+  - Fixed-point iteration
   - Newton
   - Broyden
-  - Steepest Descent
+  - Steepest descent
