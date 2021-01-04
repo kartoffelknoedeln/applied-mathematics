@@ -14,12 +14,12 @@ The topics covered will be:
   - Successive over-relaxation
   - Conjugate gradient
 - Numerical approximation
-  - Least Square
+  - Least squares fitting
     - Linear
     - Nonlinear
       - Polynomial
       - Euler
-  - Trigonometric
+    - Trigonometric
   - Fast Fourier transform
   - Power iteration
   - Wielandt deflation
