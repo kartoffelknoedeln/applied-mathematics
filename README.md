@@ -1,6 +1,6 @@
 # Applied mathematics.
 The topics covered will be:
-- Number theory
+- ### Number theory
   - Sieve of Eratosthenes
   - Primitive roots checker
   - Euler's totient function
@@ -8,12 +8,12 @@ The topics covered will be:
   - Miller-Rabin primality test
   - Square and multiply
   - Elliptic curve discrete logarithm
-- Numerical linear algebra
+- ### Numerical linear algebra
   - Jacobi
   - Gauss-Seidel
   - Successive over-relaxation
   - Conjugate gradient
-- Numerical approximation
+- ### Numerical approximation
   - Least squares fitting
     - Linear
     - Nonlinear
@@ -25,7 +25,7 @@ The topics covered will be:
   - Wielandt deflation
   - QR decomposition
   - Householder transformation
-- Numerical optimisation
+- ### Numerical optimisation
   - Fixed-point iteration
   - Newton
   - Broyden
