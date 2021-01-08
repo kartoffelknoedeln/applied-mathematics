@@ -22,11 +22,8 @@ The topics covered will be:
     - Trigonometric
   - Fast Fourier transform
   - Power iteration
-  - Wielandt deflation
-  - QR decomposition
-  - Householder transformation
-- ### Numerical optimisation
-  - Fixed-point iteration
-  - Newton
-  - Broyden
-  - Steepest descent
+  - Root-finding iteration
+    - Fixed-point
+    - Newton
+    - Broyden
+    - Steepest descent
