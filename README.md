@@ -1,4 +1,5 @@
 # Applied mathematics.
+- - -
 The topics covered will be:
 - ### Number theory
   - Sieve of Eratosthenes
